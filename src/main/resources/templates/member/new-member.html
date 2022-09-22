@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>HTML 5 Boilerplate</title>
+	    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" >
+	</head>
+	<body>
+		<form action="/members/saved" th:object="${memberHTML}" method="POST">
+			<div class="mb-3">
+			  <label for="formGroupExampleInput" class="form-label">First Name</label>
+			  <input th:field="${memberHTML.fName}" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+			</div>
+			<div class="mb-3">
+			  <label for="formGroupExampleInput2" class="form-label">Last Name</label>
+			  <input th:field="${memberHTML.lName}" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+			</div>
+			<div>
+				<button class="btn btn-primary" type="submit">Save</button>
+			</div>
+		</form>
+	</body>
+</html>
