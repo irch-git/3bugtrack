@@ -15,6 +15,7 @@ public class ProjectEntity {
 	private String projTitle;
 	private String projDescription;
 	
+	
 	public ProjectEntity() {
 		
 	}
@@ -25,6 +26,7 @@ public class ProjectEntity {
 		this.projTitle = projTitle;
 		this.projDescription = projDescription;
 	}
+	
 	
 	public Long getProjId() {
 		return projId;
@@ -44,7 +46,6 @@ public class ProjectEntity {
 	public void setProjDescription(String projDescription) {
 		this.projDescription = projDescription;
 	}
-	
 	
 	
 }

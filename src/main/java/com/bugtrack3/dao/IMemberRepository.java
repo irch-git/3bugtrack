@@ -7,5 +7,5 @@ import com.bugtrack3.entity.MemberEntity;
 
 @Repository
 public interface IMemberRepository extends CrudRepository<MemberEntity, Long> {
-
+	
 }
