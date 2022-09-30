@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bugtrack3.dao.IMemberRepository;
-import com.bugtrack3.entities.MemberEntities;
+import com.bugtrack3.entity.MemberEntity;
 
 @Controller
 @RequestMapping("/members")
@@ -20,7 +20,7 @@ public class MemberController {
 	@GetMapping("/new")
 	public String displayMember(Model model) {
 		
-		MemberEntities aMember = new MemberEntities();
+		MemberEntity aMember = new MemberEntity();
 		
 		model.addAttribute("memberHTML", aMember);
 		
@@ -28,7 +28,7 @@ public class MemberController {
 	}
 	
 	@PostMapping("/saved")
-	public String displayMember(Model model, MemberEntities aMember) {
+	public String displayMember(Model model, MemberEntity aMember) {
 		
 		memRepo.save(aMember);
 		

@@ -1,4 +1,4 @@
-package com.bugtrack3.entities;
+package com.bugtrack3.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class MemberEntities {
+public class MemberEntity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -14,11 +14,11 @@ public class MemberEntities {
 	private String fName;
 	private String lName;
 	
-	public MemberEntities() {
+	public MemberEntity() {
 		
 	}
 	
-	public MemberEntities(String fName, String lName) {
+	public MemberEntity(String fName, String lName) {
 		super();
 		this.fName = fName;
 		this.lName = lName;
